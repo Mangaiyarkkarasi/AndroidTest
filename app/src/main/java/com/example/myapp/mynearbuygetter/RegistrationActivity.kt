@@ -37,6 +37,7 @@ class RegistrationActivity : AppCompatActivity() {
         }
     }
 
+    //insert method
     private class InsertToDb(var context:RegistrationActivity,var registerEntity: RegisterEntity) :AsyncTask<Void,Void,Boolean>(){
         override fun doInBackground(vararg params: Void?): Boolean {
             context.appDatabase?.registerDao()?.insertAll(registerEntity)
